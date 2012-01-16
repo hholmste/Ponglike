@@ -1,0 +1,11 @@
+A Pong clone made by a guy that never played Pong :(
+
+A couple of remarks: the font for the score is all wrong
+
+It is made with lwjgl, which I haven't bundled, cause I haven't looked into what sort of licencing is necessary, and noone is going to actually play this thing anyway :) (It's a Pong clone, seriously).
+
+It's two-player: left paddle uses 'w' and 's' while right paddle uses 'o' and 'l'
+
+It is the first game I've ever written that is in any state of finished.
+
+It took an hour and a half. Roughly. There are no tests, although I did write one. It turned out to be pointless, though, so I deleted it.
