@@ -1,0 +1,26 @@
+apply plugin: 'application'
+apply plugin: 'groovy'
+
+sourceCompatibility=1.6
+mainClassName = "net.kathar.games.pong.Pong"
+
+//assuming you have lwjgl installed to ./lwjgl/win32
+run.systemProperties["java.library.path"] = "./lwjgl/win32"
+
+repositories {
+	mavenCentral()
+    mavenCentral name: 'slickRepo', urls: "http://slick.cokeandcode.com/mavenrepo/"
+    mavenCentral name: 'lwjgl', urls: "http://adterrasperaspera.com/lwjgl/"
+}
+
+dependencies {
+	groovy localGroovy()
+	compile group: 'junit', name: 'junit', version: '4.8.2'
+	compile group: 'slick', name: 'slick', version: '274'
+	compile group: 'org.lwjgl', name: 'lwjgl', version: '2.7.1'
+	compile group: 'com.vividsolutions', name: 'jts', version: '1.12'
+}
+
+applicationDistribution.from("lwjgl/win32") {
+	into "native"	
+}
